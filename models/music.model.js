@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const musicModel = mongoose.Schema({
-    nombre: {
+    name: {
         type: String,
         required: true
     },
@@ -15,7 +15,7 @@ const musicModel = mongoose.Schema({
     date: {
         type: String
     },
-    axel: {
+    file: {
         type: String
     }
 });
