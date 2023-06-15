@@ -1,4 +1,5 @@
 const musicModel = require("../models/music.model");
+const verifyToken = require("../utils/verifyToken");
 
 const createTrack = async (request, response) => {
     try {
@@ -11,6 +12,7 @@ const createTrack = async (request, response) => {
 }
 
 const getAllTracks = async (request, response) => {
+    console.log(request.headers)
     try {
         const tracks = await musicModel.find();
         return response.status(200).json({message: 'Todas las canciones', canciones: tracks});

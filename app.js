@@ -3,14 +3,18 @@ const server = express();
 const musicRouter = require('./routes/music.routes');
 const db = require('./config/db.config');
 const userRouter = require('./routes/users.routes');
+const cors = require('cors')
 require('dotenv').config()
 
 db();
 
+server.use(cors());
 server.use(express.json())
 server.use(express.static("storage"))
 server.use(musicRouter);
 server.use(userRouter);
+
+
 
 
 server.listen(process.env.PORT, () => {

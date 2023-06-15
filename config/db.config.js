@@ -3,7 +3,7 @@ require('dotenv').config()
 
 const db = () => {
     try {
-        mongoose.connect(process.env.MONGO_URI)
+        mongoose.connect("mongodb+srv://admin:devschool@cluster0.3mjhe6d.mongodb.net/?retryWrites=true&w=majority")
         console.log('Conectados a moingodb atlas')
     }catch(error){
         console.log('Algo salió mal')

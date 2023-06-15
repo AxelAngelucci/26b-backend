@@ -17,6 +17,9 @@ const musicModel = mongoose.Schema({
     },
     file: {
         type: String
+    },
+    image: {
+        type: String
     }
 });
 
